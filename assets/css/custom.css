@@ -1,0 +1,119 @@
+
+:root {
+  --brand-primary: #006C07;
+  --brand-accent: #F5910D;
+  --brand-soft: #EDF2EE;
+}
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #1f2937;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.navbar {
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+.navbar-brand span.brand-dot {
+  width: .55rem; height: .55rem; display: inline-block; border-radius: 9999px; background: var(--brand-accent);
+  margin-left: .25rem;
+}
+
+.btn-brand {
+  background: var(--brand-primary); border: none;
+}
+.btn-brand:hover { background: #034206; }
+
+.text-accent { color: var(--brand-accent) !important; }
+
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.6));
+  z-index: 1;
+}
+.hero .hero-bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  filter: saturate(1.05) contrast(1.05);
+}
+.hero .container { position: relative; z-index: 2; }
+
+.section {
+  padding: 50px 0;
+}
+
+.card-feature {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,.06);
+}
+.badge-soft {
+  background: var(--brand-soft);
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.icon-circle {
+  width: 3rem; height: 3rem; border-radius: 9999px;
+  display: grid; place-items: center; background: var(--brand-soft); color: var(--brand-primary);
+}
+
+.footer {
+  background: #0b4920; color: #c9d4cc;
+}
+.footer a { color: #e7f3ec; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+.gallery img {
+  border-radius: .75rem;
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.form-control:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 .2rem rgba(0, 108, 7, .15);
+}
+
+.logo {
+  flex-basis: 25%;
+  margin-right: 5%;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.logo img {
+  width: 141px;
+}
+
+.nav-item:hover{
+background-color: #006C07;
+border-radius: 20px;
+
+}
+
+.nav-item:hover .nav-link {
+  color: #fff !important;
+}
+
+section {
+  scroll-margin-top: 90px; /* ajusta según la altura de tu navbar */
+}
